@@ -1,12 +1,23 @@
+import React from "react";
+import {
+  BrowserRouter,
+  Route,
+  Router,
+  Routes,
+  HashRouter
+} from "react-router-dom";
 
+import FirstStep from "./components/FirstStep";
+import SecondStep from "./components/SecondStep";
 function App() {
 
   return (
-    <div className="App">
-     <div className="flex justify-center pt-5">
-      <h1 className=" underline font-bold text-4xl text-indigo-700">Hello world</h1>
-     </div>
-    </div>
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<FirstStep/>} />
+      <Route path="/secondstep" element={<SecondStep/>} />
+    </Routes>
+    </BrowserRouter>
   )
 }
 
