@@ -79,3 +79,9 @@ html,body{
   .slider.round:before {
     border-radius: 50%;
   }
+ 
+
+
+ .checkbox-color{
+  filter: hue-rotate(28deg) !important;
+ }

@@ -9,6 +9,8 @@ import {
 
 import FirstStep from "./components/FirstStep";
 import SecondStep from "./components/SecondStep";
+import ThirdStep from "./components/ThirdStep";
+import FinalStep from "./components/Finalstep";
 function App() {
 
   return (
@@ -16,9 +18,11 @@ function App() {
     <Routes>
       <Route path="/" element={<FirstStep/>} />
       <Route path="/secondstep" element={<SecondStep/>} />
+      <Route path="/thirdstep" element={<ThirdStep/>} />
+      <Route path="/finalstep" element={<FinalStep/>}/>
     </Routes>
     </BrowserRouter>
   )
 }
 
-export default App
+export default App;

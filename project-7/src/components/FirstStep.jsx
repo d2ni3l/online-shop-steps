@@ -1,7 +1,9 @@
-import React from "react";
+import React, {useState} from "react";
 import { Link } from "react-router-dom";
 import MobileStepHeader from "./MobileStepHeader";
+import ChangeStepfooter from "./ChangeStepfooter";
 function FirstStep() {
+  const [nextStep, setNextStep] = useState('/secondstep')
   return (
     <>
       <MobileStepHeader />
@@ -19,7 +21,7 @@ function FirstStep() {
           </label>
           <input
             type='text'
-            className='border border-2 border-[#dbdae0] rounded-md py-[7px] px-2 focus:outline-[#554f95] focus:outline-2 focus:border-none focus:outline'
+            className=' border-2 border-[#dbdae0] rounded-md py-[7px] px-2 focus:outline-[#554f95] focus:outline-2 focus:border-none focus:outline'
             id='name'
             name='name'
           />
@@ -29,7 +31,7 @@ function FirstStep() {
           </label>
           <input
             type='text'
-            className='border border-2 border-[#dbdae0] rounded-md py-[7px] px-2'
+            className=' border-2 border-[#dbdae0] rounded-md py-[7px] px-2'
             id='email'
             name='email'
           />
@@ -40,20 +42,15 @@ function FirstStep() {
           </label>
           <input
             type='number'
-            className='border border-2 border-[#dbdae0] rounded-md py-[7px] px-2'
+            className=' border-2 border-[#dbdae0] rounded-md py-[7px] px-2'
             id='phone'
             name='phone'
           />
         </form>
       </div>
 
-      <div className='absolute bottom-3 right-3 flex justify-end'>
-        <Link
-          className='p-2 px-3 tracking-wide cursor-pointer bg-[#032958] text-white rounded-md text-sm '
-          to='/secondstep'>
-          Next Step
-        </Link>
-      </div>
+
+    <ChangeStepfooter to={nextStep} goBack={false}/>
     </>
   );
 }

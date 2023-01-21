@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import MobileStepHeader from "./MobileStepHeader";
 import { Link } from "react-router-dom";
+import ChangeStepfooter from "./ChangeStepfooter";
 function SecondStep() {
   const [selected, setUnselected] = useState(true);
   return (
@@ -15,7 +16,7 @@ function SecondStep() {
         </p>
 
         <div className='flex flex-col justify-center mt-5 gap-4'>
-          <button className='flex justify-start items-center  py-5 rounded-lg gap-3 outline outline-[#b0afb4]  outline-[1.6px] focus:bg-[#f8f9fe] focus:outline-[#7a70c3]'>
+          <button className='flex justify-start items-center  py-5 rounded-lg gap-3 outline outline-[#b0afb4]  outline-[1.6px] focus:bg-[#f8f9fe] focus:outline-[#7a70c3] transition duration-200'>
             <span className='ml-4'>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
@@ -38,7 +39,7 @@ function SecondStep() {
             </span>
           </button>
 
-          <button className='flex justify-start items-center  py-5 rounded-lg gap-3 outline outline-[#b0afb4]  outline-[1.6px] focus:bg-[#f8f9fe] focus:outline-[#7a70c3]'>
+          <button className='flex justify-start items-center  py-5 rounded-lg gap-3 outline outline-[#b0afb4]  outline-[1.6px] focus:bg-[#f8f9fe] focus:outline-[#7a70c3] transition duration-200'>
             <span className='ml-4'>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
@@ -61,7 +62,7 @@ function SecondStep() {
             </span>
           </button>
 
-          <button className='flex justify-start items-center  py-5 rounded-lg gap-3 outline outline-[#b0afb4]  outline-[1.6px] focus:bg-[#f8f9fe] focus:outline-[#7a70c3]'>
+          <button className='flex justify-start items-center  py-5 rounded-lg gap-3 outline outline-[#b0afb4]  outline-[1.6px] focus:bg-[#f8f9fe] focus:outline-[#7a70c3] transition duration-200'>
             <span className='ml-4'>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
@@ -99,6 +100,8 @@ function SecondStep() {
           <p className={!selected ? select : unselect}>Yearly</p>
         </div>
       </div>
+
+      <ChangeStepfooter to={'/thirdstep'} goBack={true} goBackTo={'/'}/>
     </>
   );
 }
