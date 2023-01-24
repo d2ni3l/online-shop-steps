@@ -6,7 +6,11 @@
 html,body{
     background-color: #eef5ff;
     font-family: 'Ubuntu', sans-serif;
+    -webkit-tap-highlight-color: transparent;
+
 }
+
+    
 
 
 .svg-background{
