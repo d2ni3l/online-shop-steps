@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
 import ChangeStepfooter from "./ChangeStepfooter";
-import MobileStepHeader from "./MobileStepHeader";
+import Header from "./Header";
 function ThirdStep({
   handleOnlineService,
   handleLargerStorage,
   handleCustomizableProfile,
+  selectedPlan,
 }) {
-  const [onlineService, setOnlineService] = useState(false);
+  const [onlineService, setOnlineService] = useState(true);
   const [largerStorage, setLargerStorage] = useState(false);
   const [customizableProfile, setCustomizableProfile] = useState(false);
 
@@ -18,7 +19,7 @@ function ThirdStep({
 
   return (
     <>
-      <MobileStepHeader selected3={true} steps={true} />
+      <Header selected3={true} steps={true} />
       <div className='flex flex-col justify-center bg-white shadow-lg gap-2 -mt-16 rounded-md p-6 mx-2'>
         <h1 className='text-[#0d274f] font-bold text-2xl'>Pick add-ons</h1>
 
@@ -53,7 +54,10 @@ function ThirdStep({
               </label>
             </div>
 
-            <div className='text-[#5750a5]'>+1/mo</div>
+            <div className='text-[#5750a5]'>
+              +{selectedPlan === "monthly" ? "1" : "12"}/
+              {selectedPlan === "monthly" ? "mo" : "yr"}
+            </div>
           </button>
 
           <button className='flex justify-between items-center  py-5 rounded-lg gap-3 outline px-5 outline-[#b0afb4]  outline-[1.6px] focus:bg-[#f8f9fe] focus:outline-[#7a70c3] transition duration-200'>
@@ -82,7 +86,10 @@ function ThirdStep({
               </label>
             </div>
 
-            <div className='text-[#5750a5]'>+2/mo</div>
+            <div className='text-[#5750a5]'>
+              +{selectedPlan === "monthly" ? "2" : "24"}/
+              {selectedPlan === "monthly" ? "mo" : "yr"}
+            </div>
           </button>
 
           <button className='flex justify-between items-center  py-5 rounded-lg gap-3 outline px-5 outline-[#b0afb4]  outline-[1.6px] focus:bg-[#f8f9fe] focus:outline-[#7a70c3] transition duration-200'>
@@ -111,7 +118,10 @@ function ThirdStep({
               </label>
             </div>
 
-            <div className='text-[#5750a5]'>+2/mo</div>
+            <div className='text-[#5750a5]'>
+              +{selectedPlan === "monthly" ? "2" : "24"}/
+              {selectedPlan === "monthly" ? "mo" : "yr"}
+            </div>
           </button>
         </div>
       </div>

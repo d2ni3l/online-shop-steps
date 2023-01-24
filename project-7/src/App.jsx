@@ -24,12 +24,10 @@ function App() {
 
   const handleName = (userName) => {
     setUserName(userName);
-    console.log(userName);
   };
 
   const handleEmail = (userEmail) => {
     setUserEmail(userEmail);
-    console.log(userEmail);
   };
 
   const handleArcadeChoice = (arcadeChoice) => {
@@ -96,10 +94,23 @@ function App() {
               handleOnlineService={handleOnlineService}
               handleLargerStorage={handleLargerStorage}
               handleCustomizableProfile={handleCustomizableProfile}
+              selectedPlan={selectedPlan}
             />
           }
         />
-        <Route path='/laststep' element={<LastStep />} />
+        <Route
+          path='/laststep'
+          element={
+            <LastStep
+              planPrice={planPrice}
+              planName={planName}
+              onlineService={onlineService}
+              largerStorage={largerStorage}
+              customizableProfile={customizableProfile}
+              selectedPlan={selectedPlan}
+            />
+          }
+        />
         <Route
           path='/confirmed'
           element={<ConfirmedPage name={userName} email={userEmail} />}

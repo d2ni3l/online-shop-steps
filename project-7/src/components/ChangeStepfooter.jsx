@@ -11,7 +11,7 @@ function ChangeStepfooter({to, goBack, goBackTo, confirmed}) {
         Go Back
         </Link>}
         <Link
-          className='p-2 px-3 tracking-wide cursor-pointer bg-[#032958] text-white rounded-md text-sm '
+          className='p-2 px-3 tracking-wide cursor-pointer bg-[#032958] text-white rounded-md text-sm'
           to={to}>
           {!confirmed ? 'Next Step' : 'Confirm'}
         </Link>

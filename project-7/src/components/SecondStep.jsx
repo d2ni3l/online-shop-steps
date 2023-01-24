@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import MobileStepHeader from "./MobileStepHeader";
+import Header from "./Header";
 import { Link } from "react-router-dom";
 import ChangeStepfooter from "./ChangeStepfooter";
 
@@ -17,19 +17,19 @@ function SecondStep({
   handleSelectedPlan,
 }) {
   const [selected, setUnselected] = useState(true);
-  const [arcadechosen, setArcadechosen] = useState(false);
+  const [arcadechosen, setArcadechosen] = useState(true);
   const [advancedchosen, setAdvacedchosen] = useState(false);
   const [prochosen, setProchosen] = useState(false);
   useEffect(() => {
     handleArcadeChoice(arcadechosen);
     handleProChoice(prochosen);
     handleAdvancedChoice(advancedchosen);
-    handleSelectedPlan(selected ? 'monthly' : 'yearly');
+    handleSelectedPlan(selected ? "monthly" : "yearly");
   }, [arcadechosen, advancedchosen, prochosen, selected]);
 
   return (
     <>
-      <MobileStepHeader selected2={true} steps={true} />
+      <Header selected2={true} steps={true} />
 
       <div className='flex flex-col justify-center bg-white shadow-lg gap-2 -mt-16 rounded-md p-6 mx-2'>
         <h1 className='text-[#0d274f] font-bold text-2xl'>Select your plan</h1>
@@ -64,7 +64,9 @@ function SecondStep({
             </span>{" "}
             <span className='flex flex-col'>
               <h2 className='text-[#0d274f] font-bold '>Arcade</h2>
-              <p className='text-[#b0afb4] font-medium text-md'>$9/mo</p>
+              <p className='text-[#b0afb4] font-medium text-sm'>
+                ${selected ? 9 : 9 * 12}/{selected ? "mo" : "yr"}
+              </p>
             </span>
           </button>
 
@@ -93,7 +95,9 @@ function SecondStep({
             </span>{" "}
             <span className='flex flex-col'>
               <h2 className='text-[#0d274f] font-bold '>Advaced</h2>
-              <p className='text-[#b0afb4] font-medium text-md'>$12/mo</p>
+              <p className='text-[#b0afb4] font-medium text-sm'>
+                ${selected ? 12 : 12 * 12}/{selected ? "mo" : "yr"}
+              </p>
             </span>
           </button>
 
@@ -122,7 +126,9 @@ function SecondStep({
             </span>{" "}
             <span className='flex flex-col'>
               <h2 className='text-[#0d274f] font-bold '>Pro</h2>
-              <p className='text-[#b0afb4] font-medium text-md'>$15/mo</p>
+              <p className='text-[#b0afb4] font-medium text-sm'>
+                ${selected ? 15 : 15 * 12}/{selected ? "mo" : "yr"}
+              </p>
             </span>
           </button>
         </div>
