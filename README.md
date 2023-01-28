@@ -2,7 +2,7 @@
 
 #### Col0r Picker 
 
-An application that simulates an online order process, built with React & TaileindCSS.
+An application that simulates an online order process, built with React & TailwindCSS.
 
 ## Preview site
 https://onlineord3r.netlify.app/
