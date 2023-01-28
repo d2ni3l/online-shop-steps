@@ -5,7 +5,7 @@ function ConfirmedPage({ name, email }) {
   return (
     <>
       <Header steps={false} />
-      <div className='flex flex-col justify-center bg-white shadow-lg gap-2 -mt-16 rounded-md p-6 mx-2 py-20'>
+      <div className='flex flex-col justify-center bg-white shadow-lg gap-2 -mt-16 rounded-md p-6 mx-2 py-20 md:mx-32 lg:mx-64 xl:mx-[25rem] md:py-16'>
         <h1 className='text-[#0d274f] font-bold text-xl text-center'>
           Order has been confirmed 👍
         </h1>

@@ -15,11 +15,7 @@ body {
   background-position: center;
   background-size: cover;
 }
-@media (min-width: 768px) {
-  .svg-background {
-    background-image: url(./assets/bg-sidebar-desktop.svg);
-  }
-}
+
 
 /* The switch - the box around the slider */
 .switch {

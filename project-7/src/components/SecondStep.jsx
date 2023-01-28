@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Header from "./Header";
-import { Link } from "react-router-dom";
+
 import ChangeStepfooter from "./ChangeStepfooter";
 
 const select = "text-[#0d274f] font-bold";
@@ -31,7 +31,7 @@ function SecondStep({
     <>
       <Header selected2={true} steps={true} />
 
-      <div className='flex flex-col justify-center bg-white shadow-lg gap-2 -mt-16 rounded-md p-6 mx-2'>
+      <div className='flex flex-col justify-center bg-white shadow-lg gap-2 -mt-16 rounded-md p-6 mx-2  md:mx-32 lg:mx-64 xl:mx-[25rem] md:py-16'>
         <h1 className='text-[#0d274f] font-bold text-2xl'>Select your plan</h1>
 
         <p className='text-[#b0afb4] font-medium text-md'>

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 import Header from "./Header.jsx";
 import ChangeStepfooter from "./ChangeStepfooter";
-import ConfirmedPage from "./ConfirmedPage";
+
 function FirstStep({ handleName, handleEmail }) {
   const [nextStep, setNextStep] = useState("/secondstep");
   const [name, setName] = useState("");
@@ -16,8 +16,8 @@ function FirstStep({ handleName, handleEmail }) {
   return (
     <>
       <Header selected1={true} steps={true} />
-      <div className='flex flex-col justify-center bg-white shadow-lg gap-2 -mt-16 rounded-md p-6 mx-2'>
-        <h1 className='text-[#0d274f] font-bold text-2xl'>Personal info</h1>
+      <div className='flex flex-col justify-center bg-white shadow-lg gap-2 -mt-16 md:mx-32 lg:mx-64 xl:mx-[25rem] md:py-16 rounded-md p-6 mx-2'>
+        <h1 className='text-[#0d274f] font-bold text-2xl '>Personal info</h1>
         <p className='text-[#b0afb4] font-medium text-md'>
           Please provide your name, email address and phone number.
         </p>

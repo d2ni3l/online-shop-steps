@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import {
   BrowserRouter,
   Route,
-  Router,
   Routes,
-  HashRouter,
+
 } from "react-router-dom";
 
 import FirstStep from "./components/FirstStep";
