@@ -67,7 +67,7 @@ function App() {
   };
 
   return (
-    <BrowserRouter>
+    <BrowserRouter  basename="/order">
       <Routes>
         <Route
           path='/'
