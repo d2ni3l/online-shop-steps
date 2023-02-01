@@ -1,6 +1,7 @@
 ## Project Name 
 
-#### Col0r Picker 
+#### Online ordering demo
+
 
 An application that simulates an online order process, built with React & TailwindCSS.
 
