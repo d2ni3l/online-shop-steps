@@ -5,7 +5,7 @@
 
 
 
-![alt text]()
+![alt text](https://github.com/d2ni3l/Project-7/blob/main/project-7/demo-img.png)
 
 
 An application that simulates an online order process, built with React & TailwindCSS.
